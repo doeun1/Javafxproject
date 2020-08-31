@@ -1,6 +1,9 @@
 package basic.container;
+
 //책에 있는 내용을 자바의 클래스와 메소드로 만들어봄
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -21,8 +24,8 @@ public class VBoxExample extends Application {
 		
 		ImageView iv = new ImageView();
 		iv.setFitWidth(200);//더블타입어쩌구
-		iv.setPreserveRatio(true);
-		iv.setImage(new Image("/basic/images/징징이.jpg"));
+		iv.setPreserveRatio(true);//비율맞추기
+		iv.setImage(new Image("/basic/images/fruit1.jpg"));
 
 		HBox hbox = new HBox();
 		hbox.setAlignment(Pos.CENTER);
@@ -37,7 +40,19 @@ public class VBoxExample extends Application {
 		hbox.getChildren().add(btnNext);
 		VBox.setMargin(hbox, new Insets(10));
 		
-		
+		//이벤트 핸들러를 해당 컨트롤에 등록
+		btnNext.setOnAction(new EventHandler<ActionEvent>() {//이벤트 핸들러라는 제네릭 타입을 받음
+			int loc = 1;
+			
+			@Override
+			public void handle(ActionEvent ae) {//이벤트 핸들러 구현
+				if(loc == 9)
+					loc =1;
+				iv.setImage(new Image("/basic/images/fruit"+ loc++ +".jpg"));
+				
+			}
+			
+		});//액션이 발생했을때 이벤트를 실행하겠다
 		
 		root.getChildren().add(iv);
 		root.getChildren().add(hbox);
