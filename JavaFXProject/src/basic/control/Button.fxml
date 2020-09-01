@@ -26,15 +26,13 @@
 					alignment="CENTER_LEFT">
 					
 					<children>
-						<CheckBox fx:id="chk1" text="안경" />
-						<CheckBox fx:id="chk2" text="모자" />
+						<CheckBox fx:id="chk1" text="안경" onAction="#handleChkAction" />
+						<CheckBox fx:id="chk2" text="모자" onAction="#handleChkAction"/>
 					</children>
 				</VBox>
 
-				<ImageView fx:id="checkImageView" fitWidth="100.0"
-					preserveRatio="true">
-					<image>
-						<Image url="@/basic/images/geek.gif"/></image>
+				<ImageView fx:id="checkImageView" fitWidth="100.0" preserveRatio="true">
+					<image><Image url="@/basic/images/geek.gif"/></image>
 				</ImageView>
 
 				<Separator orientation="VERTICAL" prefHeight="100.0" />
@@ -44,11 +42,11 @@
 								<ToggleGroup fx:id="group" />
 							</fx:define>
 							<children>
-								<RadioButton fx:id="red1" text="BubbleChart"
+								<RadioButton fx:id="rad1" text="BubbleChart"
 									userData="BubbleChart" toggleGroup="$group" />
-								<RadioButton fx:id="red2" text="BarChart"
+								<RadioButton fx:id="rad2" text="BarChart"
 									userData="BarChart" toggleGroup="$group" selected="true" />
-								<RadioButton fx:id="red3" text="AreaChart"
+								<RadioButton fx:id="rad3" text="AreaChart"
 									userData="AreaChart" toggleGroup="$group" />
 
 							</children>
@@ -65,8 +63,7 @@
 	</center>
 
 	<bottom>
-		<Button fx:id="btnExit" BorderPane.alignment="CENTER"
-			>
+		<Button fx:id="btnExit" BorderPane.alignment="CENTER"  >
 
 			<graphic>
 				<ImageView>
