@@ -38,7 +38,7 @@
 		<Label layoutX="22.0" layoutY="135.0" text="내용"/>
 		
 		
-		<TextArea  fx:id="textContent" layoutX="22.0" layoutY="154.0"
+		<TextArea  fx:id="txtContent" layoutX="22.0" layoutY="154.0"
 			prefHeight="132.0" prefWidth="440.0" />
 		<Separator layoutX="13.0" layoutY="320" prefHeight="0.0"
 			prefWidth="457.0" />
