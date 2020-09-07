@@ -1,21 +1,33 @@
-package basic.example;
+package basic.student;
 
 
+import com.sun.org.apache.bcel.internal.generic.SIPUSH;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Student {
+	
+	private SimpleStringProperty id;
 	private SimpleStringProperty name;
 	private SimpleIntegerProperty korean;
 	private SimpleIntegerProperty math;
 	private SimpleIntegerProperty english;
 	
-	public Student(String name, int korean, int math, int english) {
+	public Student(String id, String name, int korean, int math, int english) {
+		this.id = new SimpleStringProperty(id);
 		this.name = new SimpleStringProperty(name);
 		this.korean = new SimpleIntegerProperty(korean);
 		this.math = new SimpleIntegerProperty(math);
 		this.english = new SimpleIntegerProperty(english);
+		
+	}
+	
+	public String getId() {
+		return this.id.get();
+	}
+	public void setId(String id) {
+		this.id.set(id);
 		
 	}
 	

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="basic.doeun.BookController">
+	<center>
+		<TableView fx:id="tableView" prefWidth="420" prefHeight="200" >
+			<columns>
+				<TableColumn prefWidth="100" resizable="false" text="Name" />
+				<TableColumn prefWidth="100" resizable="false" text="Writer" />
+				<TableColumn prefWidth="100" resizable="false" text="Company" />
+				<TableColumn prefWidth="100" resizable="false" text="Price" />
+			</columns>
+		</TableView>
+	</center>
+	<bottom>
+		<HBox prefHeight="50" alignment="CENTER">
+			<children>
+				<Button fx:id="btnAdd" text="Add" />
+
+			</children>
+		</HBox>
+	</bottom>
+</BorderPane>
+
